@@ -1,12 +1,16 @@
-import './App.css';
-import Login from './pages/Login';
+import Login from './pages/login/Login';
+import { Routes, Route } from 'react-router-dom';
+import Register from './pages/register/Register';
+import UserList from './pages/user_list/UserList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Login />
-      </header>
+    <div>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/user-list" element={<UserList />} />
+      </Routes>
     </div>
   );
 }
